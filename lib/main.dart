@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -49,15 +50,27 @@ class ProfilePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.add, size: 30, color: Color(0xFF4B4B4B)),
+            icon: const Icon(
+              Icons.add,
+              size: 30,
+              color: Color(0xFF4B4B4B),
+            ),
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.settings, size: 28, color: Color(0xFF4B4B4B)),
+            icon: const Icon(
+              Icons.settings,
+              size: 28,
+              color: Color(0xFF4B4B4B),
+            ),
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.phone, size: 27, color: Color(0xFF4B4B4B)),
+            icon: const Icon(
+              Icons.phone,
+              size: 27,
+              color: Color(0xFF4B4B4B),
+            ),
           ),
           const SizedBox(width: 5),
         ],
@@ -69,8 +82,13 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 10),
-              _buildProfileCircle(child: const IceCreamIcon()),
+
+              _buildProfileCircle(
+                child: const IceCreamIcon(),
+              ),
+
               const SizedBox(height: 12),
+
               const Text(
                 'Ice cream is very delicious right?',
                 textAlign: TextAlign.center,
@@ -80,9 +98,15 @@ class ProfilePage extends StatelessWidget {
                   color: Color(0xFF292929),
                 ),
               ),
+
               const SizedBox(height: 55),
-              _buildProfileCircle(child: const CodeIcon()),
+
+              _buildProfileCircle(
+                child: const CodeIcon(),
+              ),
+
               const SizedBox(height: 12),
+
               const Text(
                 'Programming is not boring if you love it',
                 textAlign: TextAlign.center,
@@ -92,6 +116,7 @@ class ProfilePage extends StatelessWidget {
                   color: Color(0xFF292929),
                 ),
               ),
+
               const SizedBox(height: 40),
             ],
           ),
@@ -100,7 +125,9 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildProfileCircle({required Widget child}) {
+  Widget _buildProfileCircle({
+    required Widget child,
+  }) {
     return Container(
       width: 205,
       height: 205,
@@ -165,11 +192,17 @@ class IceCreamPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5;
 
-    canvas.drawLine(const Offset(39, 72), const Offset(67, 72), detailPaint);
+    canvas.drawLine(
+      const Offset(39, 72),
+      const Offset(67, 72),
+      detailPaint,
+    );
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
 }
 
 class CodeIcon extends StatelessWidget {
